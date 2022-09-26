@@ -11,11 +11,7 @@ spring:
       host: db-mongo-catalog
       port: 27017
       database: catalog_database
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://accounts.google.com
+  
   mvc:
     log-request-details: true
   zipkin:
