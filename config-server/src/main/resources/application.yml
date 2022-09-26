@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tatianarincon96/dh-gitconfig
+          default-label: main
+
+
+server:
+  port: 8888
