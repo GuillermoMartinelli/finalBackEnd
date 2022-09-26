@@ -29,13 +29,13 @@ public class SerieController {
 
     @GetMapping("/{genre}")
     public ResponseEntity<List<Serie>> getSerieByGenre(@PathVariable String genre) {
-        logger.info("Getting list of series by genre {}", genre);
+        logger.info("Obteniendo lista de series por género {}", genre);
         return ResponseEntity.ok().body(serieService.getListByGenre(genre));
     }
 
     @PostMapping
     public ResponseEntity<Serie> saveSerie(@RequestBody Serie serie) {
-        logger.info("Serie sent to rabbitmq and saved into database");
+        logger.info("Serie enviada a rabbitmq y guardada en la base de datos");
         messageSender.send(serie);
         serie.setId(sequenceGeneratorService.generateSequence(Serie.SEQUENCE_NAME));
         return ResponseEntity.ok().body(serieService.save(serie));

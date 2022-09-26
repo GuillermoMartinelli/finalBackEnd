@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class MessageListener {
     private static final Logger log = LoggerFactory.getLogger(MessageListener.class);
     private CatalogService catalogService;
-     // =========================== Methods ===========================
+
 
     @Autowired
     public MessageListener(CatalogService catalogService) {
