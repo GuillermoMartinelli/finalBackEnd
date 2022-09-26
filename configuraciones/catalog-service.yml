@@ -28,9 +28,6 @@ queue:
 server:
   port: 8091
 
-logging:
-  level:
-    org.springframework.security: DEBUG
 
 eureka:
   client:
