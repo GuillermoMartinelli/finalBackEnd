@@ -25,7 +25,7 @@ public class MessageSender {
 
 
     public void send(Serie serie) {
-        log.info("[SEND MESSAGE TO " + this.catalogQueue.getName() + "] -> " + serie);
+        log.info("[Enviar mensaje a" + this.catalogQueue.getName() + "] -> " + serie);
         this.rabbitTemplate.convertAndSend(this.catalogQueue.getName(), serie);
     }
 

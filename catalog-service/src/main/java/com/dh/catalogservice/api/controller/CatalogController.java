@@ -26,7 +26,7 @@ public class CatalogController {
 
 	@GetMapping("/{genre}")
 	public CatalogWS getCatalogByGenre(@PathVariable String genre) {
-		logger.info("Request to get movies and series by genre {}", genre);
+		logger.info("Solicitud para obtener películas y series por género  {}", genre);
 		return catalogService.getCatalogByGenre(genre);
 	}
 
